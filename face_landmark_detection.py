@@ -10,8 +10,7 @@ import matplotlib.pyplot as plt
 
 arg = argparse.ArgumentParser()
 arg.add_argument("-p", "--shape-predictor", required=True,help="path to facial landmark predictor")
-arg.add_argument("-r", "--picamera", type=int, default=-1,
-	help="whether or not the Raspberry Pi camera should be used")
+arg.add_argument("-r", "--picamera", type=int, default=-1)
 args = vars(arg.parse_args())
 
 detector = dlib.get_frontal_face_detector()
